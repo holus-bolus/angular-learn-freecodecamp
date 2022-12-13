@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output, SimpleChanges} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output, SimpleChanges, OnDestroy} from '@angular/core';
 import {RoomsList} from "../rooms";
 
 @Component({
@@ -30,5 +30,9 @@ export class RoomsListComponent {
 
   selectRoom(room: RoomsList) {
     this.selectedRoom.emit(room);
+  }
+
+  ngOnDestroy() {
+    console.log('On destroy called');
   }
 }

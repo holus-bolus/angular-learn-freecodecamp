@@ -2,7 +2,7 @@ import {
   AfterViewChecked,
   AfterViewInit,
   Component,
-  DoCheck,
+  DoCheck, OnDestroy,
   OnInit,
   QueryList,
   ViewChild,
@@ -106,6 +106,8 @@ export class RoomsComponent implements OnInit, DoCheck, AfterViewInit, AfterView
       checkIntime: new Date('11-November-2021'),
       checkoutTime: new Date('12-November-2021'),
       rating: 4.5
-    }
+    };
+    this.roomList = [...this.roomList, room]
   }
+
 }
