@@ -1,18 +1,22 @@
 <h1>Hello world</h1>
 <!--<app-rooms></app-rooms>-->
-<app-container>
-  <app-rooms></app-rooms>
-  <app-employee></app-employee>
-  <h2>Thi is from ng-content</h2></app-container>
+<!--<app-container>-->
+<!--  <app-rooms></app-rooms>-->
+<!--  <app-employee></app-employee>-->
+<!--  <h2>This is from ng-content</h2></app-container>-->
 <div #name></div>
-<!--
-<div [ngSwitch]="role">
-  <div *ngSwitchCase="'User'">Welcome, User!</div>
-  <div *ngSwitchCase="'Admin'"><app-rooms></app-rooms></div>
-  <div *ngSwitchDefault>You are not authorized to see this page</div>
-</div>
--->
+
+<!--<div [ngSwitch]="role">-->
+<!--  <div *ngSwitchCase="'User'">Welcome, User!</div>-->
+<!--  <div *ngSwitchCase="'Admin'"><app-rooms></app-rooms></div>-->
+<!--  <div *ngSwitchDefault>You are not authorized to see this page</div>-->
+<!--</div>-->
+
 
 <!--<div>-->
 <!--  <ng-template #user></ng-template>-->
 <!--</div>-->
+<div><a [routerLink]="'rooms'">Rooms</a></div>
+<div><a [routerLink]="'employee'">Employee</a></div>
+
+<router-outlet></router-outlet>
